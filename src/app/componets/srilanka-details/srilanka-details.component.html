@@ -1,0 +1,8 @@
+<div *ngIf="covidData">
+    <app-nz-demo-statistic-card name="Active cases :" value={{covidData.local_active_cases}}
+                                colour="#CF1322"></app-nz-demo-statistic-card>
+    <app-nz-demo-statistic-card name="Deaths :" value={{covidData.local_deaths}}
+                                colour="#CF1322"></app-nz-demo-statistic-card>
+    <app-nz-demo-statistic-card name="Total Cases :" value={{covidData.local_total_cases}}></app-nz-demo-statistic-card>
+</div>
+
