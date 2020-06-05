@@ -1,0 +1,8 @@
+<div *ngIf="covidData">
+    <app-nz-demo-statistic-card name="Recovered :" value={{covidData.local_recovered}}
+                                colour="#3F8600"></app-nz-demo-statistic-card>
+    <app-nz-demo-statistic-card name="Total PCR Testing Count :"
+                                value={{covidData.total_pcr_testing_count}}></app-nz-demo-statistic-card>
+    <app-nz-demo-statistic-card name="Total Number of Individuals in Hospitals :"
+                                value={{covidData.local_total_number_of_individuals_in_hospitals}}></app-nz-demo-statistic-card>
+</div>
