@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~9.1.7",
     "@angular/platform-browser-dynamic": "~9.1.7",
     "@angular/router": "~9.1.7",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "bootstrap-schematics": "^1.7.1",
     "ng-zorro-antd": "^9.1.2",
     "ngx-bootstrap": "^5.6.1",
