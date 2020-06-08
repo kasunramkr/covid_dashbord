@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CovidApiGetService} from './services/covid-api-get.service';
+import {CovidData} from './entity/covid-data';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +10,19 @@ import {CovidApiGetService} from './services/covid-api-get.service';
 })
 export class AppComponent implements OnInit {
   title = 'untitled';
-  response: any;
+  response: CovidData;
 
   constructor(private covidGET: CovidApiGetService) {
   }
 
   ngOnInit() {
-    this.covidGET.testApiCall().subscribe(
-      (response) => {
-        this.response = response;
-        console.log(this.response);
-      }
-    );
+    this.covidGET.testApiCall()
+      .pipe(map((response: CovidData) => response))
+      .subscribe(
+        (response) => {
+          this.response = response;
+          console.log(this.response);
+        }
+      );
   }
 }
